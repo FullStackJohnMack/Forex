@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form id="form" action="/convert">
+    <label for"from">Converting from</label>
+    <input id="from" name="from" placeholder="e.g. USD"><br>
+    <label for"to">Converting to</label>
+    <input id="to" name="to" placeholder="e.g. eur"><br>
+    <label for"amount">Amount:</label>
+    <input id="amount" name="amount" placeholder="e.g. 100"><br>
+    <button type="submit" class="btn btn-primary" id="button">Convert</button>
+</form>
+
+{% endblock %}
