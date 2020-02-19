@@ -3,10 +3,12 @@
 {% block content %}
 
 {% for msg in get_flashed_messages() %}
-<p class="alert-warning">{{ msg }}</p>
+<p class="alert-warning p-1">{{ msg }}</p>
 {% endfor %}
 
 <p>The result is {{result}}.</p>
+
+<a href="/" <button id="button" class="btn btn-primary">Go Back</button></a>
 
 
 {% endblock %}
