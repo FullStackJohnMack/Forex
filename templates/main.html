@@ -2,24 +2,129 @@
 
 {% block content %}
 
-<h2>Currency Converter</h2>
+<h1 class="text-success">Currency Converter</h1>
 
-<p>Enter a FROM currency and a TO currency in the <a
-        href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html">three
-        digit format</a> (e.g. USD for US dollars or EUR for Euros) along
-    with an amount of the FROM currency (don't enter any currency symbols).</p>
-
-<p>For example, if you want to know how many Euros $100 US dollars converts to, you'd enter USD in the FROM box,
-    EUR in the TO box, and 100 in the amount box. </p>
+<ul>
+    <li>Enter a source and destination currency</li>
+    <li>Enter an amount of source currency (no symbols)</li>
+    <li>Available currencies listed below</li>
+</ul>
 
 <form id="form" action="/convert">
+    <div class="form-group"></div>
     <label for"user_from">Converting from</label>
-    <input id="user_from" name="user_from" placeholder="e.g. USD"><br>
+    <input class="form-control" id="user_from" name="user_from" placeholder="e.g. USD"><br>
     <label for"to">Converting to</label>
-    <input id="user_to" name="user_to" placeholder="e.g. eur"><br>
+    <input class="form-control" id="user_to" name="user_to" placeholder="e.g. eur"><br>
     <label for"user_amount">Amount:</label>
-    <input id="user_amount" name="user_amount" placeholder="e.g. 100"><br>
-    <button type="submit" class="btn btn-primary" id="button">Convert</button>
+    <input class="form-control" id="user_amount" name="user_amount" placeholder="e.g. 100"><br>
+    <button type="submit" class="btn btn-success" id="button">Convert</button>
+</div>
 </form>
+
+<table class="table mt-5">
+    <thead class="thead-light">
+        <th>Code</th>
+        <th>Currency</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>USD</td><td>US dollar</td>
+        </tr>
+        <tr>
+            <td>JPY</td><td>Japanese yen</td>
+        </tr>
+        <tr>
+            <td>BGN</td><td>Bulgarian lev</td>
+        </tr>
+        <tr>
+            <td>CZK</td><td>Czech koruna</td>
+        </tr>
+        <tr>
+            <td>DKK</td><td>Danish krone</td>
+        </tr>
+        <tr>
+            <td>GBP</td><td>Pound sterling</td>
+        </tr>
+        <tr>
+            <td>HUF</td><td>Hungarian forint</td>
+        </tr>
+        <tr>
+            <td>PLN</td><td>Polish zloty</td>
+        </tr>
+        <tr>
+            <td>RON</td><td>Romanian leu</td>
+        </tr>
+        <tr>
+            <td>SEK</td><td>Swedish krona</td>
+        </tr>
+        <tr>
+            <td>CHF</td><td>Swiss franc</td>
+        </tr>
+        <tr>
+            <td>ISK</td><td>Icelandic krona</td>
+        </tr>
+        <tr>
+            <td>NOK</td><td>Norwegian krone</td>
+        </tr>
+        <tr>
+            <td>HRK</td><td>Croatian kuna</td>
+        </tr>
+        <tr>
+            <td>RUB</td><td>Russian rouble</td>
+        </tr>
+        <tr>
+            <td>TRY</td><td>Turkish lira</td>
+        </tr>
+        <tr>
+            <td>AUD</td><td>Australian dollar</td>
+        </tr>
+        <tr>
+            <td>BRL</td><td>Brazilian real</td>
+        </tr>
+        <tr>
+            <td>CAD</td><td>Canadian dollar</td>
+        </tr>
+        <tr>
+            <td>CNY</td><td>Chinese yuan renminbi</td>
+        </tr>
+        <tr>
+            <td>HKD</td><td>Hong Kong dollar</td>
+        </tr>
+        <tr>
+            <td>IDR</td><td>Indonesian rupiah</td>
+        </tr>
+        <tr>
+            <td>ILS</td><td>Israeli shekel</td>
+        </tr>
+        <tr>
+            <td>INR</td><td>Indian rupee</td>
+        </tr>
+        <tr>
+            <td>KRW</td><td>South Korean won</td>
+        </tr>
+        <tr>
+            <td>MXN</td><td>Mexican peso</td>
+        </tr>
+        <tr>
+            <td>MYR</td><td>Malaysian ringgit</td>
+        </tr>
+        <tr>
+            <td>NZD</td><td>New Zealand dollar</td>
+        </tr>
+        <tr>
+            <td>PHP</td><td>Philippine peso</td>
+        </tr>
+        <tr>
+            <td>SGD</td><td>Singapore dollar</td>
+        </tr>
+        <tr>
+            <td>THB</td><td>Thai baht</td>
+        </tr>
+        <tr>
+            <td>ZAR</td><td>South African</td>
+        </tr>
+    </tbody>
+</table>
 
 {% endblock %}

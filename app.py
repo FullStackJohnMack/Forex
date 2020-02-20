@@ -1,7 +1,5 @@
-# 7:30 so far started at 2pm
-
-from forex_python.converter import CurrencyRates, CurrencyCodes
 from flask import Flask, render_template, request, flash, redirect
+from forex_python.converter import CurrencyRates, CurrencyCodes
 from utils import testArgument, getCurrencySymbol
 
 app = Flask(__name__)
@@ -19,10 +17,9 @@ def main():
 
 @app.route('/convert')
 def convert():
-    """"""
+    """Handles input validation and currency conversion"""
 
     # handles FROM argument
-
     if testArgument(request.args.get("user_from"), TEST_DICT):
         user_from = request.args.get("user_from").upper()
     else:
@@ -32,7 +29,6 @@ def convert():
     # handles TO argument
     if testArgument(request.args.get("user_to"), TEST_DICT):
         user_to = request.args.get("user_to").upper()
-        curr_symbol = codes.get_symbol(user_to)
     else:
         flash(
             f"Enter a valid 'TO' currency; '{request.args.get('user_to')}' is not a valid currency code.")
