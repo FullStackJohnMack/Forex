@@ -7,4 +7,4 @@ def testArgument(arg, dict):
 
 def getCurrencySymbol(codes, validCurrency):
     """Gets the currency symbol for a valid currency"""
-    return codes.get_symbol('USD')
+    return codes.get_symbol(validCurrency)
